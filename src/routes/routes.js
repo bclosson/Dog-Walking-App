@@ -13,7 +13,7 @@ export default (
     <Route exact path='/' component={Home}></Route>
     <Route exact path ='/login' component={Login}></Route>
     <Route exact path = '/signup' component={Signup}></Route>
-    <Route exact path ='/dog' component={DogShow}></Route>
+    <Route exact path ='/dog/:id' component={DogShow}></Route>
 
     <Route exact path ='/index' component={IndexPage}></Route>
 

@@ -1,13 +1,264 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.row .col {
+  padding: 0;
+}
+
+#match-text {
+  color: #F28C74;
+  text-align: center;
+}
+
+.card {
+  /* display: flex;
+  flex-direction: column; */
+  background-color:#91cad8;
+  text-align: center;
+  width: 300px;
+  height: 500px;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 5%;
+}
+
+.card-content {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card .card-image img {
+  padding: 0 0 0 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 300px;
+  border-radius: 5%;
+}
+
+.card-action {
+  font-size: 20px;
+  text-align: center;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  /* height: fit-content; */
+  height: auto;
+}
+
+.dogcards {
+  display: flex;
+  margin: 0 auto;
+}
+
+.main-nav {
+  background-color: #4d8b99;
+}
+
+.content {
+  width: 547px;
+  position: relative;
+  top: 100px;
+  left: 200px;
+
+  font-size: 26px;
+  
+
+}
+
+.spacing {
+  margin: 25px;
+}
+
+.button-orange {
+  background-color: #f28c74;
+}
+
+
+.carousel-buttons {
+  margin: 0 auto;
+  display: flex;
+}
+
+.carousel-back-button {
+  margin: 5px;
+
+}
+
+.carousel-next-button {
+  margin: 5px;
+  
+}
+.all-dogs-text {
+  flex-direction: column;
+}
+
+#view-all-text {
+  flex-direction: column;
+  color: #F28C74;
+  text-align: center;
+}
+
+body {
+  background: url('./images/pexels-la-miko-3671301.jpg')
+=======
+
+
+.brand-logo {
+  left: 100px;
+  font-family: 'Righteous', cursive;
+}
+
+
+.home-body {
+  background: url("./images/pexels-la-miko-3671301.jpg");
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.welcome {
+  font-family: "Righteous", cursive;
+  font-weight: 400;
+}
+
+
+.middle-intro {
+
+.formprompt {
+  width: 350px;
+  position: relative;
+  right: 100px;
+  margin: 40px;
+  border: 5px solid #F28C74;
+  padding: 15px;
+
+}
+.orange-font {
+
+  color: #f28c74;
+}
+
+.brand-logo {
+  left: 100px;
+  font-family: "Righteous", cursive;
+}
+
+nav {
+  font-family: "Righteous", cursive;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  padding: 10px;
+  
+}
+
+.profile-container {
+  font-family: "Righteous", cursive;
+}
+
+.basic-info {
+  background: #ccdbdf;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+#arrow {
+  position: absolute;
+  right: 40px;
+  padding: 20px;
+}
+
+#heart {
+  position: absolute;
+  right: 100px;
+  padding: 20px;
+}
+
+#personality {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin-left: 30px;
+  margin-top: 30px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  background: #f5dcd5;
+}
+
+#personality p {
+  font-family: Avenir;
+  font-weight: bold;
+}
+
+#about p {
+  font-family: Avenir;
+  font-weight: bold;
+
+}
+
+#about {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-right: 50px;
+  text-align: center;
+  border-radius: 10px;
+  background: #f5dcd5;
+  padding: 10px;
+}
+
+#location-bio {
+  box-shadow: none;
+  max-width: 300px;
+  margin-left: 400px;
+  margin-top: -400px;
+  text-align: center;
+}
+
+
+
+.footer {
+  height: 40px;
+  background-color: #4D8B99;
+}
+
+label {
+  color: black;
+}
+
+form p {
+  margin-top: 15px;
+}
+
+form h5 {
+  margin-top: 30px;
+}
+
+
+
+
+

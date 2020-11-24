@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import Form1 from "../components/Form1";
-import Form2 from "../components/Form2";
-import Form3 from "../components/Form3";
+import {Link} from 'react-router-dom'
+
 
 class FormPage extends Component {
   constructor() {
@@ -13,11 +12,10 @@ class FormPage extends Component {
       location: '',
       goodWithCats: '',
       goodWithKids: '',
-
-
+      dogs : []
     };
-    //  this.hideComponent = this.hideComponent.bind(this)
   }
+
   handleSubmit = (event) => {
     event.preventDefault();
   };
@@ -26,150 +24,153 @@ class FormPage extends Component {
     this.setState({
       [event.target.name]: event.target.value,
     });
-    console.log(this.state.group1);
+    console.log(this.state);
   };
   render() {
     return (
       <div className="container">
+<div className="col s6">
+        <div className="formprompt"> <h5><b>Answer the questions below to find your perfect match. </b></h5></div>
    <form>
 
-<h5>How would you describe yourself socially?</h5>
+<h5>Which best describes your living situation? (Select all that apply)</h5>
    <p>
       <label>
-        <input name="group1" type="radio" value="1" onClick={this.handleChange}/>
-        <span>I'm an extrovert</span>
+        <input name="age" type="checkbox" value="baby" />
+        <span>I have a spacious house</span>
       </label>
     </p>
     <p>
       <label>
-        <input name="group1" type="radio" value="2" onClick={this.handleChange}/>
-        <span>I'm an introvert</span>
+        <input name="age" type="checkbox" value="adult" />
+        <span>I have a small apartment</span>
       </label>
     </p>
     <p>
       <label>
-        <input name="group1" type="radio"  value="3" onClick={this.handleChange}/>
-        <span>Somewhere in between</span>
+        <input name="age" type="checkbox"  value="senior" />
+        <span>I have a yard with a fence</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input name="age" type="checkbox"  value="senior" />
+        <span>I live close to a dog park</span>
       </label>
     </p>
 
-    <h5>How much are you able to spend on a dogs monthly expenses?</h5>
-   <p>
-      <label>
-        <input name="group2" type="radio" value="1" onClick={this.handleChange}/>
-        <span>$0-499 per month</span>
-      </label>
-    </p>
-    <p>
-      <label>
-        <input name="group2" type="radio" value="2" onClick={this.handleChange}/>
-        <span>$500-999 per month</span>
-      </label>
-    </p>
-    <p>
-      <label>
-        <input name="group2" type="radio"  value="3" onClick={this.handleChange}/>
-        <span>$1000+ per month</span>
-      </label>
-    </p>
-
-    <h5>Whats your primary reason for getting a dog?</h5>
-   <p>
-      <label>
-        <input name="group3" type="radio" value="1" onClick={this.handleChange}/>
-        <span>I want a companion</span>
-      </label>
-    </p>
-    <p>
-      <label>
-        <input name="group3" type="radio" value="2" onClick={this.handleChange}/>
-        <span>I want a dog for protection</span>
-      </label>
-    </p>
-    <p>
-      <label>
-        <input name="group3" type="radio"  value="3" onClick={this.handleChange}/>
-        <span>I want a service dog</span>
-      </label>
-    </p>
-   
-    <h5>Have you ever lived with a dog before?</h5>
-   <p>
-      <label>
-        <input name="group4" type="radio" value="1" onClick={this.handleChange}/>
-        <span>Yes, I've owned a dog before</span>
-      </label>
-    </p>
-    <p>
-      <label>
-        <input name="group4" type="radio" value="2" onClick={this.handleChange}/>
-        <span>Yes, I've shared responsibility of a dog before</span>
-      </label>
-    </p>
-    <p>
-      <label>
-        <input name="group4" type="radio"  value="3" onClick={this.handleChange}/>
-        <span>Nope, this will be my first time</span>
-      </label>
-    </p>
-
-    <h5>Which would be your biggest concern as a dog owner</h5>
-   <p>
-      <label>
-        <input name="group5" type="radio" value="1" onClick={this.handleChange}/>
-        <span>Barking</span>
-      </label>
-    </p>
-    <p>
-      <label>
-        <input name="group5" type="radio" value="2" onClick={this.handleChange}/>
-        <span>House training</span>
-      </label>
-    </p>
-    <p>
-      <label>
-        <input name="group5" type="radio"  value="3" onClick={this.handleChange}/>
-        <span>Aggressive tendencies</span>
-      </label>
-    </p>
-
-    <h5>Would you prefer to have a large or small dog?</h5>
+    <h5>Do you want to be able to carry your dog?</h5>
    <p>
       <label>
         <input name="size" type="radio" value="small" onClick={this.handleChange}/>
-        <span>Go big or go home</span>
+        <span>Yes, in my purse</span>
       </label>
     </p>
     <p>
       <label>
         <input name="size" type="radio" value="medium" onClick={this.handleChange}/>
-        <span>Smaller would be easier for me</span>
+        <span>Only in an emergency</span>
       </label>
     </p>
     <p>
       <label>
         <input name="size" type="radio"  value="large" onClick={this.handleChange}/>
-        <span>No preference</span>
+        <span>I'd like my dog to be able to carry a small child</span>
       </label>
     </p>
 
-    <h5>Does your dog need to get along with kids?</h5>
+    <h5>Whats your ideal level of activity with your dog?</h5>
    <p>
       <label>
-        <input name="group7" type="radio" value="1" onClick={this.handleChange}/>
-        <span>Yes, I have one or more</span>
+        <input name="" type="radio" value="baby" />
+        <span>Leisurely stroll around the block</span>
       </label>
     </p>
     <p>
       <label>
-        <input name="group7" type="radio" value="2" onClick={this.handleChange}/>
-        <span>Kids? I am never around them</span>
+        <input name="" type="radio" value="young"/>
+        <span>I want a dog for protection</span>
       </label>
     </p>
     <p>
       <label>
-        <input name="group7" type="radio"  value="3" onClick={this.handleChange}/>
-        <span>Maybe, I might have them in the future</span>
+        <input name="" type="radio"  value="adult"/>
+        <span>I want a service dog</span>
+      </label>
+    </p>
+   
+    <h5>How comfortable are you training a dog?</h5>
+   <p>
+      <label>
+        <input name="age" type="radio" value="adult" onClick={this.handleChange}/>
+        <span>I prefer if it was already trained</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input name="age" type="radio" value="baby" onClick={this.handleChange}/>
+        <span>I'd like to train it myself</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input name="age" type="radio"  value="young" onClick={this.handleChange}/>
+        <span>I can learn to train it</span>
+      </label>
+    </p>
+
+    <h5>How do you feel about dog hair on your clothes?</h5>
+   <p>
+      <label>
+        <input name="coat" type="radio" value="short" onClick={this.handleChange}/>
+        <span>I wear designer clothes, so not great</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input name="coat" type="radio" value="medium" onClick={this.handleChange}/>
+        <span>Don't care</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input name="coat" type="radio"  value="long" onClick={this.handleChange}/>
+        <span>I'll pay my housekeeper extra</span>
+      </label>
+    </p>
+
+    <h5>Do you imagine your dog as an introvert or extrovert?</h5>
+   <p>
+      <label>
+        <input name="goodWithKids" type="radio" value="true" onClick={this.handleChange}/>
+        <span>Extrovert, my dog is my wingman</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input name="goodWithKids" type="radio" value="false" onClick={this.handleChange}/>
+        <span>Introvert, just like me</span>
+      </label>
+    </p>
+   
+
+    <h5>Does your dog need to cohabitate with cats?</h5>
+   <p>
+      <label>
+        <input name="goodWithCats" type="radio" value="true" onClick={this.handleChange}/>
+        <span>Yes, my dog can't terrorize my cats</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input name="goodWithCats" type="radio" value="false" onClick={this.handleChange}/>
+        <span>Nope, I'm a dog person</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input name="goodWithCats" type="radio"  value="false" onClick={this.handleChange}/>
+        <span>I'd like it to chase the cats out of my yard</span>
       </label>
     </p>
 
@@ -213,113 +214,32 @@ class FormPage extends Component {
       </label>
     </p>
 
-    <h5>How would you react if your dog had a small accident on your floor?</h5>
-   <p>
-      <label>
-        <input name="group10" type="radio" value="1" onClick={this.handleChange}/>
-        <span>Horrified</span>
-      </label>
-    </p>
-    <p>
-      <label>
-        <input name="group10" type="radio" value="2" onClick={this.handleChange}/>
-        <span>Not ideal but shit happens</span>
-      </label>
-    </p>
-    <p>
-      <label>
-        <input name="group10" type="radio"  value="3" onClick={this.handleChange}/>
-        <span>Happy to train my new friend</span>
-      </label>
-    </p>
+    <h5>What's your Zipcode?</h5>
+<p>
+  <input name="location" className = "input-field" onChange={this.handleChange}  type = "text" ></input>
+</p>
 
-    <h5>Which best describes your living situation?</h5>
-   <p>
-      <label>
-        <input name="group11" type="radio" value="1" onClick={this.handleChange}/>
-        <span>A small apartment</span>
-      </label>
-    </p>
-    <p>
-      <label>
-        <input name="group11" type="radio" value="2" onClick={this.handleChange}/>
-        <span>A house with a yard</span>
-      </label>
-    </p>
-    <p>
-      <label>
-        <input name="group11" type="radio"  value="3" onClick={this.handleChange}/>
-        <span>A house with other pets</span>
-      </label>
-    </p>
 
-    <h5>How attached would you like your dog to be to you?</h5>
-   <p>
-      <label>
-        <input name="group12" type="radio" value="1" onClick={this.handleChange}/>
-        <span>We will be together all the time</span>
-      </label>
-    </p>
-    <p>
-      <label>
-        <input name="group12" type="radio" value="2" onClick={this.handleChange}/>
-        <span>Im busy, not too attached</span>
-      </label>
-    </p>
-    <p>
-      <label>
-        <input name="group12" type="radio"  value="3" onClick={this.handleChange}/>
-        <span>A healthy balance</span>
-      </label>
-    </p>
 
+  
+<Link className = 'btn button-orange spacing' to ={{
+  pathname: '/index',
+  aboutDog: {
+    age: this.state.age,
+    coat: this.state.coat,
+    size: this.state.size,
+    location: this.state.location,
+    goodWithCats: this.state.goodWithCats,
+    goodWithKids: this.state.goodWithKids,
+
+  }
+}}>FIND MY COMPANION</Link>
 </form>
+</div>
+
     </div>
     );
   }
-  //   hideComponent(name) {
-  //     console.log(name)
-  //     switch(name) {
-  //       case "showForm1":
-  //         this.setState({showForm1: !this.state.showForm1});
-  //         break
-  //       case "showForm2":
-  //         this.setState({showForm2: !this.state.showForm2})
-  //         break
-  //       case "showForm3":
-  //         this.setState({showForm3: !this.state.showForm3})
-  //         break
-  //       default:
-  //         this.setState({showForm1: !this.state.showForm1})
-
-  //     }
-  //   }
-  //   render() {
-  //     const {showForm1, showForm2, showForm3} = this.state
-  //     return (
-  //       <div>
-  //         <h1>Form</h1>
-  //         {showForm1 && <Form1 />}
-  //         <hr />
-  //         {showForm2 && <Form2 />}
-  //         <hr />
-  //         {showForm3 && <Form3 />}
-  //         <hr />
-  //         <div>
-  //           <button onClick={() => this.hideComponent("showForm1")}>
-  //             Click to hide Form1 component
-  //           </button>
-  //           <button onClick={() => this.hideComponent("showForm2")}>
-  //             Click to hide Form2 component
-  //           </button>
-  //           <button onClick={() => this.hideComponent("showForm3")}>
-  //             Click to hide Form3 component
-  //           </button>
-  //         </div>
-  //       </div>
-  //     );
-  //   }
-  // }
 }
 
 export default FormPage;

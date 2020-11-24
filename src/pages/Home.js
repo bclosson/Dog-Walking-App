@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
+import Background from '../images/pexels-la-miko-3671301.jpg'
+
+// let sectionStyle = {
+
+//   width: "100px",
+//   height: "100px",
+
+//   backgroundImage: 'url(' + {Background} + ')'
+// }
 
 class Home extends Component {
   state = {  }
@@ -7,8 +16,6 @@ class Home extends Component {
   componentDidMount() {
     let key = 'rqgLcLaO8ZSjNJDMdqy1i19a3qZBrDVBrcGHHWF366C34RtFJN'
 let secret = 'kfQMxVox4kH2I7A56kwo1JPrJyoRuQEnxWHwfoDc'
-let org ="RI77"
-let status= "adoptable"
 let size="medium"
 let location = 92625
 let goodWithDogs = "true"
@@ -60,9 +67,17 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
   }
   render() { 
     return ( 
-      <div>
-        <h1>This is the home page</h1>
-        <Link to = '/formpage'>Take Survey</Link>
+
+      <div className='home-body'>
+
+        <div className="content">
+        <h3 className="welcome">Welcome to Puppy Love</h3>
+        <p className="middle-intro">We take the guess work out of finding your new companion</p>
+        <p className="middle-intro">Tired of online dating? <br></br>Get a dog.</p>
+        <p className="welcome orange-font">You can train him...</p>
+        <Link to = '/formpage' className='btn button-orange'>FIND YOUR MATCH</Link>
+        </div>
+        
 
       </div>
      );
@@ -72,10 +87,4 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
 export default Home;
   
   
-  // fetchDog = () =>{
-  //   let API_key = 'rqgLcLaO8ZSjNJDMdqy1i19a3qZBrDVBrcGHHWF366C34RtFJN'
-  //   let API_Call = "//api.petfinder.com/v2/animals/"
-  //   let API_Token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJycWdMY0xhTzhaU2pOSkRNZHF5MWkxOWEzcVpCckRWQnJjR0hIV0YzNjZDMzRSdEZKTiIsImp0aSI6IjUyOWJkZWMyZDU5MWY4MWEzNTZlYzdjODkzNWE1YzY2ZWVmOGQ0MDcyNDE5MWRkYjZhMzJjNzIxZWZjMjM3ZDAyYzEyYjhmNmExMjBhZDJkIiwiaWF0IjoxNjA2MTc2OTk1LCJuYmYiOjE2MDYxNzY5OTUsImV4cCI6MTYwNjE4MDU5NSwic3ViIjoiIiwic2NvcGVzIjpbXX0.lKyNdHdrA7kdqx-87pU_hnsLSMOKMyevImjuS3wEz6uBbZ5mhZRRkgRr6J1LgFV29RUFe1Kn6bgR96dxuOhgYf74VPOhRL5_S4LBnmYRfuYMyrumwDPcKiiEKLjlNf7bcgLJRmMu-9AsJpOy2KgZwrpdQipq9z7rrGGZHEAyFqfIHtfT_bCyfIicfuFncYZyJras5bBKOqhY6azKtp_cHH_UqTbxlkPFBY99u0dW_AvW4LgzVtDjCkUabn289AvQJa2VWYH5z-upfT3UFNe1aBSXaKWc0wjgYAMNcAmPWrJCwjtmhMQtU3_6RYlGG4lo_mWMtJaHqwmcAAwrq0jtxA"
-
-  // }
-  // curl -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJycWdMY0xhTzhaU2pOSkRNZHF5MWkxOWEzcVpCckRWQnJjR0hIV0YzNjZDMzRSdEZKTiIsImp0aSI6IjUyOWJkZWMyZDU5MWY4MWEzNTZlYzdjODkzNWE1YzY2ZWVmOGQ0MDcyNDE5MWRkYjZhMzJjNzIxZWZjMjM3ZDAyYzEyYjhmNmExMjBhZDJkIiwiaWF0IjoxNjA2MTc2OTk1LCJuYmYiOjE2MDYxNzY5OTUsImV4cCI6MTYwNjE4MDU5NSwic3ViIjoiIiwic2NvcGVzIjpbXX0.lKyNdHdrA7kdqx-87pU_hnsLSMOKMyevImjuS3wEz6uBbZ5mhZRRkgRr6J1LgFV29RUFe1Kn6bgR96dxuOhgYf74VPOhRL5_S4LBnmYRfuYMyrumwDPcKiiEKLjlNf7bcgLJRmMu-9AsJpOy2KgZwrpdQipq9z7rrGGZHEAyFqfIHtfT_bCyfIicfuFncYZyJras5bBKOqhY6azKtp_cHH_UqTbxlkPFBY99u0dW_AvW4LgzVtDjCkUabn289AvQJa2VWYH5z-upfT3UFNe1aBSXaKWc0wjgYAMNcAmPWrJCwjtmhMQtU3_6RYlGG4lo_mWMtJaHqwmcAAwrq0jtxA" https://api.petfinder.com/v2/animals?type=dog&page=1
+  
